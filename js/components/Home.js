@@ -6,7 +6,7 @@ var Home = React.createClass({
 			<div className="row">
 				<div className="col-xs-12">
 					<h1 className="text-center">
-						Home
+						Hossme
 					</h1>
 				</div>
 			</div>
