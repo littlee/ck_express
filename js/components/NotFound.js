@@ -1,6 +1,12 @@
 var React = require('react');
 
 var NotFound = React.createClass({
+	statics: {
+		loadProps: function(params, cb) {
+			cb(null, {});
+		}
+	},
+	
 	render: function() {
 		return (
 			<div className="row">

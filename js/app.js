@@ -4,6 +4,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Router = require('react-router').Router;
 var browserHistory = require('react-router').browserHistory;
+var AsyncProps = require('async-props');
 
 var rootRoute = {
 	component: 'div',
@@ -24,6 +25,8 @@ var rootRoute = {
 };
 
 ReactDOM.render(
-	<Router history={browserHistory} routes={rootRoute} />,
+	<Router history={browserHistory} routes={rootRoute} render={(props) => (
+		<AsyncProps {...props} renderLoading={() => <div>Loading...</div>}/>
+	)}/>,
 	document.getElementById('app')
 );
