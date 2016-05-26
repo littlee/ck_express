@@ -1,12 +1,11 @@
-require('../css/bootstrap.css');
+import '../css/bootstrap.css';
+import '../less/A.less';
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, browserHistory } from 'react-router';
+import AsyncProps from 'async-props';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Router = require('react-router').Router;
-var browserHistory = require('react-router').browserHistory;
-var AsyncProps = require('async-props');
-
-var rootRoute = {
+const rootRoute = {
 	component: 'div',
 	childRoutes: [{
 		path: '/',
@@ -24,9 +23,7 @@ var rootRoute = {
 	}]
 };
 
-ReactDOM.render(
-	<Router history={browserHistory} routes={rootRoute} render={(props) => (
-		<AsyncProps {...props} renderLoading={() => <div>Loading...</div>}/>
-	)}/>,
+render(
+	<Router history={browserHistory} routes={rootRoute} render={(props) => <AsyncProps {...props} renderLoading={() => <div>Loading...</div>} />} />,
 	document.getElementById('app')
-);
+	);

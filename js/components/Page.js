@@ -1,3 +1,5 @@
+require('../../less/page.less');
+
 var React = require('react');
 var PageUtil = require('../utils/PageUtil.js');
 
@@ -5,9 +7,7 @@ var Page = React.createClass({
 	statics: {
 		loadProps: function(params, cb) {
 			PageUtil.getData(function(res) {
-				cb(null, {
-					p: res
-				});
+				cb(null, {p:res});
 			});
 		}
 	},
@@ -22,10 +22,12 @@ var Page = React.createClass({
 		return (
 			<div className="row">
 				<div className="col-xs-12">
-					<h1 className="text-center">
-						Page
-					</h1>
-					{p}
+					<div className="page">
+						<h1 className="text-center">
+							Page
+						</h1>
+						{p}
+					</div>
 				</div>
 			</div>
 			);

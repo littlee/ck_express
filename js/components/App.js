@@ -1,15 +1,16 @@
 var React = require('react');
 
 var App = React.createClass({
-	statics: {
-		loadProps: function(params, cb) {
-			cb(null, {});
-		}
+
+	getInitialState: function() {
+		return {
+			loading: false
+		};
 	},
 
 	render: function() {
 		return (
-			<div id="ck-container">
+			<div id="ck-container" className={this.state.loading ? 'loading' : ''}>
 				<div className="container-fluid">
 					{this.props.children}
 				</div>
