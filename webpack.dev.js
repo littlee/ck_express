@@ -3,11 +3,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	entry: [
-		'webpack-dev-server/client?http://localhost:3333',
-		'webpack/hot/dev-server',
-		'./js/app.js'
-	],
+	entry: './js/app.js',
 	output: {
 		path: path.join(__dirname, '__build__'),
 		filename: 'bundle.js',
@@ -41,6 +37,9 @@ module.exports = {
 		// new webpack.optimize.UglifyJsPlugin(),
 		new ExtractTextPlugin('bundle.css'),
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin()
+		new webpack.NoErrorsPlugin(),
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+		})
 	]
 };

@@ -1,26 +1,30 @@
+var express = require('express');
+var rewrite = require('express-urlrewrite');
 var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
+var webpackDevMiddleware = require('webpack-dev-middleware');
+var WebpackConfig = require('./webpack.dev.js');
 var fs = require('fs');
-var config = require('./webpack.dev.js');
+var path = require('path');
 
 fs.createReadStream('./dev.html').pipe(fs.createWriteStream('./index.html'));
 
-var PORT = 3333;
+var app = express();
 
-new WebpackDevServer(webpack(config), {
+app.use(webpackDevMiddleware(webpack(WebpackConfig), {
 	publicPath: '/__build__/',
 	hot: true,
 	historyApiFallback: true,
 	stats: {
 		colors: true
-	},
-	staticOptions: {
-		index: './dev.html'
 	}
-}).listen(PORT, 'localhost', function(err) {
-	if (err) {
-		console.log(err);
-		return;
-	}
-	console.log(':::Server Running::: ==> localhost:' + PORT);
+}));
+
+app.use(express.static(__dirname));
+
+app.get('*', function(request, response) {
+	response.sendFile(path.resolve(__dirname, 'index.html'));
+});
+
+app.listen(3333, function() {
+	console.log('Server listening on http://localhost:3333, Ctrl+C to stop');
 });
