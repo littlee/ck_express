@@ -15,6 +15,7 @@ const rootRoute = {
 		},
 		childRoutes: [
 			require('./routes/Page.js'),
+			require('./routes/SignIn.js'),
 			{
 				path: '*',
 				component: require('./components/NotFound.js')
