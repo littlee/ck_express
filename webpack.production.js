@@ -36,7 +36,7 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		// new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
 		new ExtractTextPlugin('[hash].bundle.css'),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),

@@ -1,5 +1,7 @@
 var React = require('react');
 
+var Loading = require('./Loading.js');
+
 var App = React.createClass({
 
 	getInitialState: function() {
@@ -14,6 +16,7 @@ var App = React.createClass({
 				<div className="container-fluid">
 					{this.props.children}
 				</div>
+				<Loading />
 			</div>
 			);
 	}

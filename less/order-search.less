@@ -1,0 +1,66 @@
+@import "public.less";
+
+.order-search {
+	&-header {
+		color: @ck_main;
+		padding: 15px;
+		padding-left: 30px;
+		background-color: white;
+		border-bottom: 1px solid @ck_main;
+		position: relative;
+
+		&-back {
+			outline: 0;
+			border: none;
+			background-color: transparent;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&-input {
+		.clearfix();
+		padding: 10px;
+		background-color: white;
+
+		&-group {
+			overflow: hidden;
+			padding-right: 10px;
+
+			.input-group-addon {
+				background-color: transparent;
+				color: #a5a5a5;
+			}
+
+			.form-control {
+				border-left: none;
+				padding-left: 0;
+
+				&:focus {
+					box-shadow: none;
+					border-color: #ccc;
+				}
+			}
+		}
+
+		&-btn {
+			float: right;
+		}
+	}
+
+	&-items {
+		padding: 10px;
+	}
+
+	.ladda-button {
+		width: 100%;
+		padding: 10px;
+		font-size: 14px;
+		background: #999 !important;
+	}
+}

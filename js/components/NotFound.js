@@ -7,7 +7,7 @@ var NotFound = React.createClass({
 			<div className="row">
 				<div className="col-xs-12">
 					<h1 className="text-center">
-						404 Not Found
+						未发现页面 (404)
 					</h1>
 				</div>
 			</div>

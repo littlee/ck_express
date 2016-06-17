@@ -1,0 +1,151 @@
+@import "public.less";
+
+.addr-mgr {
+	&-item {
+		.clearfix();
+		background-color: white;
+		position: relative;
+		margin-bottom: 10px;
+
+		&-inner {
+			display: block;
+			font-weight: normal;
+			padding-bottom: 10px;
+			margin: 0;
+			color: #333;
+
+			&:hover,
+			&:focus
+			&:active {
+				background-color: #eee;
+				text-decoration: none;
+				color: #333;
+			}
+		}
+
+		&-logo {
+			float: left;
+			padding: 10px;
+		}
+
+		&-thumb {
+			width: 50px;
+			height: 50px;
+			color: white;
+			text-align: center;
+			background-color: #f8d11d;
+			border-radius: 2px;
+			position: relative;
+			display: table-cell;
+			vertical-align: middle
+		}
+
+		&-info {
+			padding: 10px;
+			position: relative;
+		}
+
+		&-name {
+			margin-right: 5px;
+		}
+
+		&-phone {
+			margin-right: 10px;
+		}
+
+		&-footer {
+			.clearfix();
+			margin: 0 15px;
+			border-top: 1px solid #dbdbdb;
+			padding: 5px 0;
+		}
+
+		&-default {
+			float: left;
+
+			&-icon {
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				vertical-align: text-top;
+				margin-right: 5px;
+				background-image: url(../images/r_checked.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+
+		&-undefault {
+			float: left;
+
+			&-icon {
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				vertical-align: text-top;
+				margin-right: 5px;
+				background-image: url(../images/r_unchecked.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+
+		&-delete {
+			float: right;
+			background-color: transparent;
+			border: none;
+			outline: 0;
+
+			&-icon {
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				vertical-align: text-top;
+				margin-right: 5px;
+				background-image: url(../images/delete.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+
+		&-selected {
+			width: 20px;
+			height: 20px;
+			display: block;
+			position: absolute;
+		}
+	}
+
+	&-btns {
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+
+	&-btn {
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		background-color: @ck_main;
+		border: 1px solid @ck_main;
+		border-radius: 2px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		color: white;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		outline: 0;
+
+		&-back {
+			color: @ck_main;
+			background-color: transparent;
+		}
+	}
+
+	&-no {
+		text-align: center;
+		margin-top: 50px;
+	}
+}

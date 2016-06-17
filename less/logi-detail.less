@@ -1,0 +1,27 @@
+@import "public.less";
+
+.logi-detail {
+	&-header {
+		color: @ck_main;
+		padding: 15px;
+		background-color: white;
+		border-bottom: 1px solid @ck_main;
+	}
+
+	&-body {
+		background-color: white;
+		padding: 0 15px;
+	}
+
+	&-pair {
+
+		& + & {
+			border-top: 1px solid #dbdbdb;
+		}
+		padding: 10px 0;
+	}
+
+	&-value {
+		color: #9B9B9B;
+	}
+}

@@ -1,0 +1,176 @@
+@import "public.less";
+
+.order-detail {
+	&-header {
+		color: @ck_main;
+		padding: 15px;
+		background-color: white;
+		border-bottom: 1px solid @ck_main;
+	}
+
+	&-num {
+		.clearfix();
+		background-color: white;
+		border-bottom: 1px solid #DBDBDB;
+		padding: 15px;
+
+		&-key {
+			display: block;
+			float: left;
+		}
+
+		&-val {
+			display: block;
+			float: right;
+			color: #575757;
+		}
+	}
+
+	&-status {
+		background-color: white;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		position: relative;
+		margin-bottom: 10px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			border-left: 1px solid #dbdbdb;
+			left: 25px;
+		}
+
+		&-item {
+			position: relative;
+			margin-left: 18px;
+			margin-bottom: 5px;
+			padding-left: 20px;
+
+			&.active {
+				.order-detail-status-icon {
+					background-image: url(../images/order_time_active.png);
+				}
+
+				.order-detail-status-name {
+					color: @ck_main;
+				}
+			}
+		}
+
+		&-icon {
+			display: block;
+			width: 15px;
+			height: 15px;
+			background-image: url(../images/order_time.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: absolute;
+			top: 2px;
+			left: 0;
+		}
+
+		&-name {
+			display: block;
+			color: #6f6f6f;
+		}
+
+		&-time {
+			color: #c4c4c4;
+		}
+	}
+
+	&-info {
+		background-color: white;
+		padding-left: 20px;
+		margin-bottom: 10px;
+
+		&-pair {
+			border-bottom: 1px solid #dbdbdb;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-right: 10px;
+			.clearfix();
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		&-key {
+			display: block;
+			float: left;
+		}
+
+		&-val {
+			display: block;
+			float: right;
+		}
+	}
+
+	&-confirm {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		margin-bottom: 15px;
+		background-color: white;
+		text-align: center;
+
+		&-mark {
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-image: url(../images/mark.png);
+			vertical-align: text-top;
+			margin-right: 5px;
+		}
+
+		&-text {
+			text-align: center;
+		}
+	}
+
+	&-modal {
+		&-header {
+			border-bottom: 1px solid #b7b7b7;
+		}
+
+		&-title {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		&-body {
+			padding: 10px 0;
+		}
+
+		&-block {
+			margin-bottom: 10px;
+			&-title {
+				color: #a5a5a5;
+				margin-bottom: 5px;
+			}
+
+			&-info {
+				> p {
+					margin-bottom: 3px;
+				}
+			}
+		}
+
+		&-footer {
+			text-align: center;
+			border-top: 1px solid #b7b7b7;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			.btn {
+				padding-left: 60px;
+				padding-right: 60px;
+			}
+		}
+	}
+}

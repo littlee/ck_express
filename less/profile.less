@@ -1,0 +1,72 @@
+@import "public.less";
+
+.profile {
+	&-header {
+		background-color: white;
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		.clearfix();
+
+		&-logo {
+			float: left;
+		}
+
+		&-info {
+			overflow: hidden;
+			padding-left: 10px;
+		}
+
+		&-name {
+			font-size: 16px;
+		}
+
+		&-belong {
+			color: #8c8c8c;
+		}
+	}
+
+	&-link {
+		position: relative;
+		background-color: white;
+		margin-bottom: 10px;
+		display: block;
+		padding: 10px;
+		color: #333;
+
+		&:active {
+			background-color: #eee;
+		}
+
+		.glyphicon {
+			color: #5c5c5c;
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			display: block;
+			top: 0;
+			right: 10px;
+			bottom: 0;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+
+	&-icon {
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		vertical-align: middle;
+		margin-right: 10px;
+
+		&-personal {
+			background-image: url(../images/personal_info.png);
+		}
+
+		&-modify {
+			background-image: url(../images/modify_pswd.png);
+		}
+	}
+}

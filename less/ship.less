@@ -1,0 +1,270 @@
+@import "public.less";
+
+.ship {
+	&-add-new-addr {
+		padding-top: 35px;
+		padding-bottom: 35px;
+		background-color: white;
+		text-align: center;
+		margin-bottom: 10px;
+
+		.glyphicon {
+			margin-right: 5px;
+		}
+
+		&:active {
+			background-color: #eee;
+		}
+	}
+
+	&-sel-addr {
+		.clearfix();
+		background-color: white;
+		margin-bottom: 10px;
+		
+		&-logo {
+			float: left;
+			padding: 10px;
+		}
+
+		&-thumb {
+			width: 50px;
+			height: 50px;
+			color: white;
+			text-align: center;
+			background-color: #f8d11d;
+			border-radius: 2px;
+			position: relative;
+			display: table-cell;
+			vertical-align: middle
+		}
+
+		&-info {
+			padding: 10px;
+			position: relative;
+		}
+
+		&-title {
+			color: #8b8b8d;
+		}
+
+		&-name {
+			margin-right: 5px;
+		}
+
+		&-phone {
+			margin-right: 10px;
+		}
+
+		&-edit {
+			background-color: transparent;
+			border: none;
+			outline: 0;
+			padding: 3px 10px;
+		}
+
+		&-arrow {
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			display: block;
+			top: 0;
+			right: 10px;
+			bottom: 0;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+
+	&-select {
+		padding: 0 15px;
+		background-color: white;
+
+		&-title {
+			padding: 10px;
+			border-bottom: 1px solid @ck_main;
+		}
+
+		&-item {
+			padding: 10px;
+			position: relative;
+
+			&:active {
+				background-color: #eee;
+			}
+
+			& + & {
+				border-top: 1px solid #DBDBDB;
+			}
+
+			&-label {
+				position: absolute;
+				display: block;
+				height: 100%;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				padding: 0 10px;
+
+				> input {
+					display: none;
+				}
+
+				> input + .ship-select-item-icon {
+					position: absolute;
+					display: block;
+					width: 20px;
+					height: 20px;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					background-image: url(../images/unchecked.png);
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: 100%;
+				}
+
+				> input:checked + .ship-select-item-icon {
+					background-image: url(../images/checked.png);
+				}
+			}
+
+			&-wrap {
+				.clearfix();
+			}
+
+			&-logo {
+				float: left;
+				padding-left: 20px;
+			}
+
+			&-thumb {
+				width: 50px;
+				height: 50px;
+				background-color: #ccc;
+				color: white;
+				position: relative;
+
+				> span {
+					font-size: 32px;
+					width: 32px;
+					height: 32px;
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+					line-height: 1.2em;
+				}
+			}
+
+			&-info {
+				overflow: hidden;
+				padding: 0 10px;
+			}
+
+			&-name {
+				font-size: large;
+			}
+
+			&-serve {
+				color: #888;
+			}
+		}
+	}
+
+	&-other {
+		padding-top: 20px;
+		text-align: center;
+
+		&-tips {
+			color: #767676;
+		}
+
+		&-btn {
+			background-color: transparent;
+			border: none;
+			color: @ck_main;
+			text-decoration: underline;
+			outline: 0;
+		}
+
+		&-items {
+			position: fixed;
+			background-color: #F2F2F2;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding-top: 10px;
+		}
+
+		&-item {
+			text-align: left;
+			padding: 10px 15px;
+			background-color: white;
+
+			&:active {
+				background-color: #eee;
+			}
+
+			& + & {
+				border-top: 1px solid #f2f2f2;
+			}
+		}
+	}
+
+	&-btn {
+		padding: 6px 70px;
+
+		&-wrap {
+			text-align: center;
+			padding: 30px 0;
+		}
+	}
+
+	&-modal {
+		&-header {
+			border-bottom: 1px solid #b7b7b7;
+		}
+
+		&-title {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		&-body {
+			padding: 10px 0;
+		}
+
+		&-block {
+			margin-bottom: 10px;
+			&-title {
+				color: #a5a5a5;
+				margin-bottom: 5px;
+			}
+
+			&-info {
+				> p {
+					margin-bottom: 3px;
+				}
+			}
+		}
+
+		&-footer {
+			text-align: center;
+			border-top: 1px solid #b7b7b7;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			.btn {
+				padding-left: 60px;
+				padding-right: 60px;
+			}
+		}
+	}
+}
